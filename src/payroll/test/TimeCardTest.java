@@ -4,13 +4,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import payroll.PayrollDatabase;
+import payroll.trans.AddHourlyEmployeeTransaction;
+
 class TimeCardTest {
 
 	//登记时间卡（一个时间卡，钟点工）
 	//TimeCard EmpId date hours
 	@Test
 	public void testOneTimeCardToHourlyEmplouyee() {
-		
+		//添加一个钟点工，然后给钟点工登记一个时间卡
+		int empId = 3001;
+		new AddHourlyEmployeeTransaction(empId, "Bill", "Home", 12.5).execute();
+		assertNotNull(PayrollDatabase.getEmployee(empId));
+		//添加时间卡
 	}
 	//登记时间卡（两个时间卡，钟点工）
 	@Test
