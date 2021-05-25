@@ -25,11 +25,15 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 		//新建雇员
 		Employee employee = new Employee(empId,name,address);
 		//设置工资计算方式
-		employee.setPaymentClassification(new SalariedClassification(salary));
+		employee.setPaymentClassification(getPaymentClassification());
 		//设置工资支付方式
 		employee.setPaymentMethod(new HoldMethod());
 		//保存到数据库
 		PayrollDatabase.save(employee);
+	}
+
+	private SalariedClassification getPaymentClassification() {
+		return new SalariedClassification(salary);
 	}
 
 }
