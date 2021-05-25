@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import payroll.PayrollDatabase;
+import payroll.Transaction;
 import payroll.trans.AddHourlyEmployeeTransaction;
 
 class TimeCardTest {
@@ -18,6 +19,13 @@ class TimeCardTest {
 		new AddHourlyEmployeeTransaction(empId, "Bill", "Home", 12.5).execute();
 		assertNotNull(PayrollDatabase.getEmployee(empId));
 		//添加时间卡
+		String date = "2013-06-01"; //用字符串简化日期表示
+		double hours = 8;
+		
+		Transaction t = new TimeCardTransaction(empId,date,hours);
+		t.execute();
+		
+		//验证时间卡
 	}
 	//登记时间卡（两个时间卡，钟点工）
 	@Test
