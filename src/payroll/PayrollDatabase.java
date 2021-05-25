@@ -1,9 +1,13 @@
 package payroll;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PayrollDatabase {
 
+	private static Map<Integer, Employee> employees = new HashMap<Integer, Employee>();
 	public static Employee getEmployee(int empId) {
-		return null;
+		return employees.get(empId);
 	}
 
 }
