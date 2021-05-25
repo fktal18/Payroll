@@ -4,8 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import payroll.Employee;
+import payroll.PaymentClassification;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.classification.HourlyClassification;
 import payroll.trans.AddHourlyEmployeeTransaction;
 
 class TimeCardTest {
@@ -26,6 +29,15 @@ class TimeCardTest {
 		t.execute();
 		
 		//验证时间卡
+		Employee employee = PayrollDatabase.getEmployee(empId);
+		PaymentClassification pc = employee.getPaymentClassification();	
+		assertTrue(pc instanceof HourlyClassification); //应为钟点工
+		HourlyClassification hc = (HourlyClassification) pc;
+		TimeCard tc = hc.getTimeCardOfDate(date);  // 取出当日时间卡
+		assertNotNull(tc);	//时间卡非空
+		assertEquals(date, tc.getDate()); // 日期正确
+		assertEquals(hours, tc.getHours(), 0.01);//工作小时数正确
+
 	}
 	//登记时间卡（两个时间卡，钟点工）
 	@Test
