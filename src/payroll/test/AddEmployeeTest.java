@@ -19,6 +19,11 @@ class AddEmployeeTest {
 		//添加小时工资雇员
 		//AddEmp EmpId “name” “address” H hourly-rate
 		public void testAddHourlyEmployeeTransaction() {
+			int empId = 1001;
+			String name = "Bill";
+			String address = "Home";
+			double hourlyRate = 12.5;
 			
+			// 新建添加钟点工操作，并执行
 		}
 }
