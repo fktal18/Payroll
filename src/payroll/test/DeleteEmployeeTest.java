@@ -20,7 +20,7 @@ class DeleteEmployeeTest {
 	//消息，不进行其他处理。
 
 	@Test
-	public void DeleteEmployeeTest() {
+	public void testDeleteEmployeeExisted() {
 		//先插入一个雇员，然后删除
 		int empId = 2001;
 		new AddHourlyEmployeeTransaction(empId, "Bill", "Home", 12.5)
