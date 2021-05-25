@@ -73,6 +73,6 @@ class AddEmployeeTest {
 			assertEquals(salary, sc.getSalary(), 0.01); // 月薪正确
 			PaymentMethod pm = e.getPaymentMethod();
 			assertTrue(pm instanceof HoldMethod);
-			//
+			//修改编译问题
 		}
 }
