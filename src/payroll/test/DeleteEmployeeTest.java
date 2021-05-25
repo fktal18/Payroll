@@ -35,5 +35,6 @@ class DeleteEmployeeTest {
 		assertNull(e); // 雇员已删除
 		//修改编译错误
 		//测试，gg
+		//再次执行，测试通过
 	}
 }
