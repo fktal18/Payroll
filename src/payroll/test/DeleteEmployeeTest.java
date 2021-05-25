@@ -4,6 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import payroll.Employee;
+import payroll.PayrollDatabase;
+import payroll.Transaction;
+import payroll.trans.AddHourlyEmployeeTransaction;
+
 class DeleteEmployeeTest {
 
 	//用例2  删除雇员。
@@ -17,6 +22,16 @@ class DeleteEmployeeTest {
 	@Test
 	public void DeleteEmployeeTest() {
 		//先插入一个雇员，然后删除
+		int empId = 2001;
+		new AddHourlyEmployeeTransaction(empId, "Bill", "Home", 12.5)
+			.execute();
+		// 删除雇员
+		Transaction t = new DeleteEmployeeTransaction(empId);
+		t.execute();
 		
+		// 验证雇员已删除
+		Employee e = PayrollDatabase.getEmployee(empId);
+		assertNull(e); // 雇员已删除
+		//修改编译错误
 	}
 }
