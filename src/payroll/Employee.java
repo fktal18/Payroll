@@ -1,10 +1,10 @@
 package payroll;
 
 public class Employee {
-	private Integer empId;
+	private int empId;
 	private String name;
 	private String address;
-	public Integer getEmpId() {
+	public int getEmpId() {
 		return empId;
 	}
 	public void setEmpId(Integer empId) {
@@ -22,7 +22,7 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Employee(Integer empId, String name, String address) {
+	public Employee(int empId, String name, String address) {
 		super();
 		this.empId = empId;
 		this.name = name;
