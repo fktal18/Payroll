@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import payroll.Transaction;
+
 class AddEmployeeTest {
 	//用例1：增加雇员。
 		//使用AddEmp操作(transaction)增加新雇员。该操作包含有分配的雇员号、雇员的名字及其
