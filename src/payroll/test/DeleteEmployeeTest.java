@@ -8,6 +8,7 @@ import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.trans.AddHourlyEmployeeTransaction;
+import payroll.trans.DeleteEmployeeTransaction;
 
 class DeleteEmployeeTest {
 
