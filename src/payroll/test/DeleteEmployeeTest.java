@@ -37,4 +37,8 @@ class DeleteEmployeeTest {
 		//测试，gg
 		//再次执行，测试通过
 	}
+	@Test
+	public void testDeleteEmployeeNotExisted() {
+		
+	}
 }
