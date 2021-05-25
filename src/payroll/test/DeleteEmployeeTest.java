@@ -45,7 +45,12 @@ class DeleteEmployeeTest {
 		assertNull(employee); //数据库中不存在改雇员
 		//删除雇员
 		Transaction t = new DeleteEmployeeTransaction(empId);
-		t.execute();
+		try {
+			t.execute();
+			fail("No such employee.");
+		} catch (Exception e) {
+			assertTrue(e instanceof NoSuchEmployeeException);
+		}
 		//第一次测试，并不通过
 	}
 }
