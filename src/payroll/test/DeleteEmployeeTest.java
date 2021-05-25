@@ -34,5 +34,6 @@ class DeleteEmployeeTest {
 		Employee e = PayrollDatabase.getEmployee(empId);
 		assertNull(e); // ¹ÍÔ±ÒÑÉ¾³ı
 		//ĞŞ¸Ä±àÒë´íÎó
+		//²âÊÔ£¬gg
 	}
 }
