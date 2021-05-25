@@ -77,5 +77,6 @@ class AddEmployeeTest {
 			assertTrue(pm instanceof HoldMethod);
 			//修改编译问题
 			//尝试运行，失败
+			//再次尝试，ok
 		}
 }
