@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.exception.NoSuchEmployeeException;
 import payroll.trans.AddHourlyEmployeeTransaction;
 import payroll.trans.DeleteEmployeeTransaction;
 
@@ -39,6 +40,12 @@ class DeleteEmployeeTest {
 	}
 	@Test
 	public void testDeleteEmployeeNotExisted() {
-		
+		int empId = 2002; //不存在的雇员编号
+		Employee employee = PayrollDatabase.getEmployee(empId);
+		assertNull(employee); //数据库中不存在改雇员
+		//删除雇员
+		Transaction t = new DeleteEmployeeTransaction(empId);
+		t.execute();
+		//第一次测试，并不通过
 	}
 }
