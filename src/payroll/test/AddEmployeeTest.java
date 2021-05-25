@@ -25,5 +25,8 @@ class AddEmployeeTest {
 			double hourlyRate = 12.5;
 			
 			// 新建添加钟点工操作，并执行
+			Transaction t = new AddHourlyEmployeeTransaction(empId, name, address, hourlyRate);
+			t.execute();
+			// 验证执行结果
 		}
 }
