@@ -48,5 +48,7 @@ class AddEmployeeTest {
 			assertEquals(hourlyRate, hc.getHourlyRate(), 0.01); // 小时工资正确
 			PaymentMethod pm = e.getPaymentMethod();
 			assertTrue(pm instanceof HoldMethod); // 支付方式默认为保存支票
+			//第一次测试，gg
+		
 		}
 }
