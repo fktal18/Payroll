@@ -33,7 +33,7 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 		PayrollDatabase.save(employee);
 	}
 
-	private PaymentClassification getPaymentClassification() {
+	protected PaymentClassification getPaymentClassification() {
 		return new SalariedClassification(salary);
 	}
 
