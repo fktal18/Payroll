@@ -108,6 +108,7 @@ class AddEmployeeTest {
 			assertEquals(commissionRate, sc.getCommissionRate(), 0.0001);
 			//修改编译错误
 			//第一次测试
+			//第二次测试，通过
 		}
 		
 		
