@@ -10,6 +10,7 @@ import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
 import payroll.trans.AddHourlyEmployeeTransaction;
+import payroll.trans.TimeCardTransaction;
 
 class TimeCardTest {
 
