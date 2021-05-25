@@ -52,4 +52,10 @@ class AddEmployeeTest {
 			//再次尝试,gg
 			//运行，成功
 		}
+		//添加月薪雇员
+		//AddEmp EmpId “name" “address” S monthly-salary
+		@Test
+		public  void testAddSalariedEmployee() {
+			
+		}
 }
