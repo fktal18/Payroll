@@ -49,6 +49,7 @@ class AddEmployeeTest {
 			PaymentMethod pm = e.getPaymentMethod();
 			assertTrue(pm instanceof HoldMethod); // 支付方式默认为保存支票
 			//第一次测试，gg
+			//再次尝试,gg
 		
 		}
 }
