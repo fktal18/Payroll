@@ -1,6 +1,7 @@
 package payroll.trans;
 
 import payroll.Employee;
+import payroll.PaymentClassification;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
@@ -32,7 +33,7 @@ public class AddHourlyEmployeeTransaction implements Transaction {
 		PayrollDatabase.save(employee);
 	}
 
-	private HourlyClassification getPaymentClassification() {
+	private PaymentClassification getPaymentClassification() {
 		return new HourlyClassification(hourlyRate);
 	}
 
