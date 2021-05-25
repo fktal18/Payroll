@@ -81,4 +81,12 @@ class AddEmployeeTest {
 			//有重复代码，抽取超类
 			//抽取完成，测试成功
 		}
+		//添加月薪加销售提成的雇员
+		//AddEmp EmpId “name” “address” C monthly-salary commission-rate
+		@Test
+		public void testAddCommissionedEmployee() {
+			
+		}
+		
+		
 }
