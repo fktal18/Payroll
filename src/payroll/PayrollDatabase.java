@@ -9,5 +9,8 @@ public class PayrollDatabase {
 	public static Employee getEmployee(int empId) {
 		return employees.get(empId);
 	}
+	public static void save(Employee employee) {
+		employees.put(employee.getEmpId(), employee);
+	}
 
 }
